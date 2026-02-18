@@ -1,8 +1,17 @@
+-- Starts the Auto-Gatling script in a background thread
+task.spawn(function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/NEW-TOWER-Tower-Defense-Simulator-Auto-gatling-99162"))()
+end)
+
+-- Your TDS Auto-Strat (Frost Mode / Summer Castle)
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/DuxiiT/auto-strat/refs/heads/main/Library.lua"))()
 
 TDS:Loadout("Ranger", "Accelerator", "Scout", "Gatling Gun", "Turret")
 TDS:Mode("Frost")
 TDS:GameInfo("Summer Castle", {})
+
+-- Automatically use a Timescale Ticket for 2x Speed
+TDS:TimeScale(2)
 
 TDS:Place("Scout", 17.387, 0.987, 33.950)
 TDS:Place("Scout", 17.073, 0.985, 30.941)
